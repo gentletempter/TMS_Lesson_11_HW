@@ -9,8 +9,7 @@ import java.util.Scanner;
  */
 public class ConsoleReader {
     public static void consoleReader() {
-        Scanner sc = new Scanner(System.in);
-        try {
+        try (Scanner sc = new Scanner(System.in)) {
             int sTime = sc.nextInt();
             while (sTime != -1) {
                 new MyThread(sTime).start();
